@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+   <head>
+      <!-- Required meta tags -->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!-- Bootstrap CSS -->
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+      <title>Hello, world!</title>
+      <link href="../style.css" rel="stylesheet">
+   </head>
+   <body>
+      
+         <div class="container-fluid bg-dark mt-1 " style="width:100%;height: 100%;">
+            <div class="container bg-secondary pt-3">
+                <center>
+                    <div class="container">
+                       <h1 class="text-light"> Blood Of Circuit</h1>
+                       <h3 class="text-light">Hardware</h3>
+                    </div>
+               
+            </center>
+
+               <hr>
+               <div id="site" class="container pt-1">
+                <h4 class="text-light">This Challenge was kinda cool, it was the first time I play tasks under such Category, As you know I'm a hardware freak (◡‿◡) so i really wanted to solve this task. </h4>
+                <div class="container-fluid">
+                    <h2 class="text-light">Task : </h2>
+                    <center>
+                    <img class="border border-dark"id="taskimg" src="Bloodofcircuit.jpeg" style="    box-shadow: 0px 0px 5px 3px #33ff00;">
+                    </center>
+                    <br>
+                    <h4 class="text-light"  > > After Downloading the attached file I noticed that it has "pdsprj"
+                         as an extension, one google search and I got that it is a format used in PCB design
+                          projects.</h4>
+                    <h4 class="text-light"  > > Luckily I already got a software called "Proteus 8" Installed
+                         on my windows PC, and that format is supported, double clicking the file got me this :  </h4>
+                    <img class="img-fluid" src="bloodofcircuit2.jpg" >
+                    <br>
+                    <br>
+                    <h4 class="text-light"> > This is a circuit obviously that has some simple gates (NOR, AND, NOT), 
+                        all I needed to do to fix this circuit is making the input of those gates the right one 
+                    so that i can get 1 on the output. </h4>
+                    <h4 class="text-light"> > Since I'm familar with gates and Circuits all I had to do is have a look 
+                        at the functioning tables of those gates and swap the input bits accordingly.
+                    </h4>
+                    <img src="">
+                    <h4 class="text-light"> > truth table of logical functions :  </h4>
+                   
+                        
+                            <img class="img-fluid" src="not.JPG">
+                            <br />
+                            <br />
+                            <img class="img-fluid" src="nor.JPG">
+                            <br />
+                            <br />
+                            <img class="img-fluid" src="and.JPG">
+                            <br />
+                            <br />
+                    <h4 class="text-light"> > The desired output is 1 so after having a full understanding of what those gates need 
+                        to give me that output I started flipping bits utill I got this : 
+
+                    </h4>
+                    <img class="img-fluid" src="result.JPG" >
+                    <br>
+                    <br>
+                    <h4 class="text-light">
+                         > To get that 1 in the ouput I needed this series of bits : 01000010 01101001 01101110 01100001 01110010 01111001 01001001 01101110 01010110 01100101 01101001 01101110 <br> 
+                         which in ASCII gave me : BinaryInVein <br /><br />
+                         > <span style="background:#33ff00; color:black;"> FLAG : KCTF{BinaryInVein}</span>
+
+                    </h4>
+                        
+                    
+                </div>
+                </div>
+                <footer class=" text-center text-white pt-5 " style="bottom: 0;">
+                    <!-- Copyright -->
+                   <div class="text-center p-3">
+                       Made it by myself that's why it looks bad (⌒_⌒;)
+                    
+                   </div>
+               </footer>
+            </div>
+            
+         </div>
+      
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+   </body>
+</html>
