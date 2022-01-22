@@ -1,0 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
+
+body {
+    background-color:#212529;
+  font-family: "VT323", monospace;
+  height: 100%;
+}
+#User {
+  width: 40%;
+}
+#face {
+  width: 200px;
+  height: 200px;
+}
+#site{
+    width: 80%;
+    height:100%;
+}
+a{
+    color:white;
+    text-decoration: none;
+}
+a:hover{
+    color:#212529;
+}
