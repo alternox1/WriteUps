@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+   <head>
+      <!-- Required meta tags -->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!-- Bootstrap CSS -->
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+      <title>AlternoX | How to defeat a dragon</title>
+      <link href="../../style.css" rel="stylesheet">
+   </head>
+   <body>
+      
+         <div class="container-fluid bg-dark mt-1 " style="width:100%;height: 100%;">
+            <div class="container bg-secondary pt-3">
+                    <div class="container">
+                        <a href="../index.html" style="float:left;font-size: 20pt;font-weight:bold;" > << </a><span class="text-white"style="float:right;font-size: 20pt;" >12/08/2022</span><br><hr>
+                       <h1 class="text-light text-center">How To Defeat a Dragon<span id="curs">|</span></h1>
+                       <h3 class="text-light text-center">Reverse</h3>
+                    </div>
+               
+
+               <hr>
+               <div id="site" class="container pt-1">
+                <h4 class="text-light">I've spend quite some time learning about reverse and studying assembly, This one was my starting task and I got excited to solve <sub>( ‾́ ◡ ‾́ )</sub>.</h4>
+                
+                <div class="container-fluid">
+                    <h2 class="text-light">Task : </h2>
+                    <center>
+                    <img class="border border-dark img-fluid"id="taskimg" src="Howtodefeatadragon.jpeg" style="    box-shadow: 0px 0px 5px 3px #33ff00;">
+                    </center>
+                    <br>
+                    <h4 class="text-light">Task Files : <a href="vault.rar" id="taskfiles" download>Vault.rar [download]</a></h4>
+                    <h4 class="text-light"> > After Downloading the attached file I didn't bother running it and I directly threw it into IDA and hit the decompile button (F5).</h4>
+                    <h4 class="text-light"  > > By doing that i got this : </h4>
+                    <img class="img-fluid" src="VaultIDA.PNG" >
+                    <br>
+                    <br>
+                    <h4 class="text-light"> > That's obviously the flag, Reading back the task description, Hexadecimal was mentioned, Taking the piece of text inside the curly braces : </h4>
+                    <code>5348454c4c4354467b31355f523376337235316e675f333473793f7d</code>
+                    <h4 class="text-light"> > Putting it inside a decryptor like cyberchef and using the "from hex" add-on gave me this :  </h4>
+                   
+                    <img class="img-fluid" src="Flag.jpeg" >
+                    <br>
+                    <br>
+                    <h4 class="text-light">
+                         <br />
+                         > <span style="background:#33ff00; color:black;"> FLAG : SHELLCTF{15_R3v3r51ng_34sy?}</span>
+
+                    </h4>
+                        
+                    
+                </div>
+                </div>
+                <footer class=" text-center text-white pt-5 " style="bottom: 0;">
+                    <!-- Copyright -->
+                   <div class="text-center p-3">
+                       Made it by myself that's why it looks bad (⌒_⌒;)
+                    
+                   </div>
+               </footer>
+            </div>
+            
+         </div>
+      
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+   </body>
+</html>

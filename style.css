@@ -47,3 +47,18 @@ a:hover{
   display: inline-block;
   animation: cursor-blink 1.5s steps(2) infinite;
 }
+
+
+#taskfiles{
+  color: #33ff00;
+
+}
+#taskfiles:hover{
+    text-shadow: 0px 0px 5px cyan;
+}
+
+code{
+  color:#33ff00;
+  background-color: #212529;
+  font-size: 16pt;
+}
