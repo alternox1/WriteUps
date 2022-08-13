@@ -14,7 +14,7 @@
          <div class="container-fluid bg-dark mt-1 " style="width:100%;height: 100%;">
             <div class="container bg-secondary pt-3">
                     <div class="container">
-                        <a href="../index.html" style="float:left;font-size: 20pt;font-weight:bold;" > << </a><span class="text-white"style="float:right;font-size: 20pt;" >12/08/2022</span><br><hr>
+                        <a href="../../index.html" style="float:left;font-size: 20pt;font-weight:bold;" > << </a><span class="text-white"style="float:right;font-size: 20pt;" >14/08/2022</span><br><hr>
                        <h1 class="text-light text-center">Warmup<span id="curs">|</span></h1>
                        <h3 class="text-light text-center">Reverse</h3>
                     </div>
@@ -22,30 +22,41 @@
 
                <hr>
                <div id="site" class="container pt-1">
-                <h4 class="text-light">I've spend quite some time learning about reverse and studying assembly, This one was my starting task and I got excited to solve <sub>( ‾́ ◡ ‾́ )</sub>.</h4>
+                <h4 class="text-light">I managed to solve this one too <sub>＼(≧▽≦)／</sub>.</h4>
                 
                 <div class="container-fluid">
                     <h2 class="text-light">Task : </h2>
                     <center>
-                    <img class="border border-dark img-fluid"id="taskimg" src="Howtodefeatadragon.jpeg" style="    box-shadow: 0px 0px 5px 3px #33ff00;">
+                    <img class="border border-dark img-fluid"id="taskimg" src="task.PNG" style="    box-shadow: 0px 0px 5px 3px #33ff00;">
                     </center>
                     <br>
-                    <h4 class="text-light">Task Files : <a href="vault.rar" id="taskfiles" download>Vault.rar [download]</a></h4>
-                    <h4 class="text-light"> > After Downloading the attached file I didn't bother running it and I directly threw it into IDA and hit the decompile button (F5).</h4>
-                    <h4 class="text-light"  > > By doing that i got this : </h4>
-                    <img class="img-fluid" src="VaultIDA.PNG" >
+                    <h4 class="text-light">Task Files : <a href="warmup.rar" id="taskfiles" download>Warmup.rar [download]</a></h4>
+                    <h4 class="text-light"> > After Downloading the attached file I (as usual) directly threw it into IDA and hit the decompile button (F5).</h4>
+                    <h4 class="text-light"  > > By doing that and reading through code i first met this : </h4>
+                    <img class="img-fluid" src="first part.png" >
                     <br>
                     <br>
-                    <h4 class="text-light"> > That's obviously the flag, Reading back the task description, Hexadecimal was mentioned, Taking the piece of text inside the curly braces : </h4>
-                    <code>5348454c4c4354467b31355f523376337235316e675f333473793f7d</code>
-                    <h4 class="text-light"> > Putting it inside a decryptor like cyberchef and using the "from hex" add-on gave me this :  </h4>
+                    <h4 class="text-light"> > Once executed, The binary takes a string that has 27 as a length. </h4>
+                    <h4 class="text-light"> > Then there is this long set of assignments : </h4>
                    
-                    <img class="img-fluid" src="Flag.jpeg" >
+                    <img class="img-fluid" src="second part.PNG" >
                     <br>
                     <br>
+                    <h4 class="text-light"> > It is obviously something, but those are not ASCII values as they are all above 127.</h4>
+                    <h4 class="text-light"> > Taking a look at the final part of the code : </h4>
+                    <img class="img-fluid" src="last part.PNG">
+                    <br>
+                    <br>
+                    <h4 class="text-light"> > As it seems everything is understandable, the "for" there is just a loop that cycles through the whole array of characters that was made before, the only weird thing is that ">>" operator. </h4>
+                    <h4 class="text-light"> > What that operator does is that if, For example, We take an integer “X” with an integer “Y” and write <code>X>>Y</code>, that is equivalent to dividing X by 2<sup>y</sup>. </h4> 
+                    
+                    <h4 class="text-light"> > So it seems like the array is actually holding Ascii values but right shifted ( that's what this operator ">>" is called ), Using my quite decent programming skills I wrote this script which after running got me the flag like this : 
+                    </h4>
+                    <h4 class="text-light">Script : <a href="Warmup Solver.py" id="taskfiles" download>Warmup Solver.py [download]</a></h4>
+                    <img class="img-fluid" src="flag.PNG">
                     <h4 class="text-light">
                          <br />
-                         > <span style="background:#33ff00; color:black;"> FLAG : SHELLCTF{15_R3v3r51ng_34sy?}</span>
+                         > <span style="background:#33ff00; color:black;"> FLAG : shellctf{b1tWi5e_0p3rAt0rS}                        </span>
 
                     </h4>
                         
